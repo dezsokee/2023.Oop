@@ -19,4 +19,22 @@ public class BankAccount {
     public String toString() {
         return "Bankszamla { szamlaszam " + accountNumber + ", egyenleg: " + balance + "}";
     }
+
+    public void deposit (double deposit_balance)
+    {
+        this.balance += deposit_balance;
+    }
+
+    public boolean withdraw (double withdraw_balance)
+    {
+        if (this.balance < withdraw_balance)
+        {
+            return false;
+        }
+        else
+        {
+            this.balance -= withdraw_balance;
+            return true;
+        }
+    }
 }
