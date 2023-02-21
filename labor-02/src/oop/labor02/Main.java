@@ -1,5 +1,7 @@
 package oop.labor02;
 
+import java.util.Random;
+
 public class Main {
     public static void main(String[] args)
     {
@@ -8,7 +10,7 @@ public class Main {
             System.out.println("Account1 balance:" + account1.getBalance());
             System.out.println("Account1 details:" + account1.toString());*/
 
-        BankAccount account1 = new BankAccount("OTP00001");
+        /*BankAccount account1 = new BankAccount("OTP00001");
         System.out.println("Account1 details: " + account1.getAccountNumber() + " " + account1.getBalance());
 
         account1.deposit(1000);
@@ -38,6 +40,73 @@ public class Main {
         System.out.println("Account2 details: " + account2.getAccountNumber() + " " + account2.getBalance());
 
         account2.deposit(2000);
-        System.out.println("After the deposit, the details of account2 are: " + account2.getAccountNumber() + " " + account2.getBalance());
+        System.out.println("After the deposit, the details of account2 are: " + account2.getAccountNumber() + " " + account2.getBalance());*/
+
+        /*Rectangle[] rectangles = new Rectangle[10];
+        Random rand = new Random();
+
+        double length, width;
+        double totalArea = 0;
+
+        for (int i = 0; i < 10; i++) {
+            length = 1 + rand.nextInt(10);
+            width = 1 + rand.nextInt(10);
+            rectangles[i] = new Rectangle(length, width);
+        }
+
+        for (int i = 0; i < 10; i++) {
+            System.out.println(i+1 + ". rectangle details: " + rectangles[i].getLength() + " x " + rectangles[i].getWidth());
+            System.out.println("The area is: " + rectangles[i].area() + " and the perimeter is: " + rectangles[i].perimeter());
+            totalArea += rectangles[i].area();
+        }
+
+        System.out.println("The total area is: " + totalArea);*/
+
+        /*DateUtil dateUtil = new DateUtil();
+
+        int date = 2024;
+        System.out.println(dateUtil.loopYear(date));*/
+
+        /* System.out.println(DateUtil.isValidDate(2000,2, 29) == true);
+        System.out.println(DateUtil.isValidDate(2000,2, 30) == false);
+        System.out.println(DateUtil.isValidDate(1900,2, 29) == false);
+        System.out.println(DateUtil.isValidDate(1900,2, 28) == true);
+        System.out.println(DateUtil.isValidDate(-1900,2, 28) == false);
+        System.out.println(DateUtil.isValidDate(0,2, 28) == false);
+        System.out.println(DateUtil.isValidDate(2021,2, 29) == false);
+        System.out.println(DateUtil.isValidDate(2020,2, 29) == true);
+        System.out.println(DateUtil.isValidDate(2020,1, 32) == false);
+        System.out.println(DateUtil.isValidDate(2020,1, 0) == false);
+        System.out.println(DateUtil.isValidDate(2020,0, 0) == false);
+        System.out.println(DateUtil.isValidDate(2020,4, 31) == false);
+        System.out.println(DateUtil.isValidDate(2020,1, 31) == true);*/
+
+        //randomDates();
+
+    }
+
+    public static void randomDates ()
+    {
+        int bad_counter = 0;
+        for (int i = 0; i < 1000; i++)
+        {
+            Random rand = new Random();
+            int generated_year = 1 + (rand.nextInt(2030 - 1000) + 1000);
+            int generated_month = 1 + rand.nextInt(12);
+            int generated_day = 1 + rand.nextInt(31);
+
+            DateUtil dateUtil = new DateUtil();
+            if (dateUtil.isValidDate(generated_year, generated_month, generated_day))
+            {
+                System.out.println(generated_year + " - " + generated_month + " - " + generated_day);
+            }
+            else
+            {
+                bad_counter ++;
+            }
+        }
+
+        System.out.println("The system generated " + bad_counter + " invalid dates");
+
     }
 }
