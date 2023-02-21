@@ -1,6 +1,11 @@
 package oop.labor02;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args)
@@ -82,9 +87,35 @@ public class Main {
         System.out.println(DateUtil.isValidDate(2020,1, 31) == true);*/
 
         //randomDates();
+        /*File file = new File("D:\\Egyetem\\2023.Oop\\labor-02\\src\\oop\\labor02\\data.txt");
+        Scanner sc = null;
+        //sc.useDelimiter(",\n");
 
-    }
+        List<Movie> movies = new ArrayList<Movie>();
 
+        try {
+            sc = new Scanner(file);
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+
+        while (sc.hasNextLine())
+            System.out.println(sc.nextLine());
+            String title = sc.next();
+            String director = sc.next();
+            int releaseYear = sc.nextInt();
+            double rating = Double.valueOf(sc.next());
+            Genre genre = Genre.valueOf(sc.next());
+
+            Movie current_movie = new Movie(title,director,releaseYear,rating,genre);
+
+            movies.add(current_movie);
+
+        for (Movie movie : movies) {
+            System.out.println(movie);
+        }
+    }*/
+}
     public static void randomDates ()
     {
         int bad_counter = 0;
