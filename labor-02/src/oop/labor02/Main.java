@@ -69,7 +69,7 @@ public class Main {
 
         /*DateUtil dateUtil = new DateUtil();
 
-        int date = 2024;
+        int date = 2000;
         System.out.println(dateUtil.loopYear(date));*/
 
         /* System.out.println(DateUtil.isValidDate(2000,2, 29) == true);
