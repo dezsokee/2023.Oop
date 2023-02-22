@@ -11,11 +11,11 @@ public class Main {
     public static void main(String[] args)
     {
         /*BankAccount account1 = new BankAccount("IBAN1");
-            System.out.println("Account1 Number:" + account1.getAccountNumber());
-            System.out.println("Account1 balance:" + account1.getBalance());
-            System.out.println("Account1 details:" + account1.toString());*/
+        System.out.println("Account1 Number:" + account1.getAccountNumber());
+        System.out.println("Account1 balance:" + account1.getBalance());
+        System.out.println("Account1 details:" + account1.toString());*/
 
-        /*BankAccount account1 = new BankAccount("OTP00001");
+        BankAccount account1 = new BankAccount("OTP00001");
         System.out.println("Account1 details: " + account1.getAccountNumber() + " " + account1.getBalance());
 
         account1.deposit(1000);
@@ -45,9 +45,9 @@ public class Main {
         System.out.println("Account2 details: " + account2.getAccountNumber() + " " + account2.getBalance());
 
         account2.deposit(2000);
-        System.out.println("After the deposit, the details of account2 are: " + account2.getAccountNumber() + " " + account2.getBalance());*/
+        System.out.println("After the deposit, the details of account2 are: " + account2.getAccountNumber() + " " + account2.getBalance());
 
-        /*Rectangle[] rectangles = new Rectangle[10];
+        Rectangle[] rectangles = new Rectangle[10];
         Random rand = new Random();
 
         double length, width;
@@ -65,14 +65,14 @@ public class Main {
             totalArea += rectangles[i].area();
         }
 
-        System.out.println("The total area is: " + totalArea);*/
+        System.out.println("The total area is: " + totalArea);
 
-        /*DateUtil dateUtil = new DateUtil();
+        DateUtil dateUtil = new DateUtil();
 
         int date = 2000;
-        System.out.println(dateUtil.loopYear(date));*/
+        System.out.println(dateUtil.loopYear(date));
 
-        /* System.out.println(DateUtil.isValidDate(2000,2, 29) == true);
+        System.out.println(DateUtil.isValidDate(2000,2, 29) == true);
         System.out.println(DateUtil.isValidDate(2000,2, 30) == false);
         System.out.println(DateUtil.isValidDate(1900,2, 29) == false);
         System.out.println(DateUtil.isValidDate(1900,2, 28) == true);
@@ -84,9 +84,9 @@ public class Main {
         System.out.println(DateUtil.isValidDate(2020,1, 0) == false);
         System.out.println(DateUtil.isValidDate(2020,0, 0) == false);
         System.out.println(DateUtil.isValidDate(2020,4, 31) == false);
-        System.out.println(DateUtil.isValidDate(2020,1, 31) == true);*/
+        System.out.println(DateUtil.isValidDate(2020,1, 31) == true);
 
-        //randomDates();
+        randomDates();
         /*File file = new File("D:\\Egyetem\\2023.Oop\\labor-02\\src\\oop\\labor02\\data.txt");
         Scanner sc = null;
         //sc.useDelimiter(",\n");
