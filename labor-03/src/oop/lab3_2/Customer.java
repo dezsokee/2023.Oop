@@ -1,7 +1,5 @@
 package oop.lab3_2;
 
-import oop.lab3_1.BankAccount;
-
 public class Customer {
     private final String firstName;
     private String lastName;
@@ -16,7 +14,7 @@ public class Customer {
         this.lastName = lastName;
     }
 
-    public void setAccount (BankAccount account)
+    public void addAccount (BankAccount account)
     {
         if (numAccounts == MAX_ACCOUNTS)
         {
@@ -52,21 +50,29 @@ public class Customer {
 
     public void closeAccount (String accountNumber)
     {
+        int ok = -1;
         for (int i = 0; i < numAccounts; i++) {
             if (accounts[i].getAccountNumber().equals(accountNumber))
             {
                 accounts[i] = accounts[numAccounts - 1];
                 accounts[numAccounts - 1] = null;
                 numAccounts --;
+                ok = 0;
             }
+        }
+        if (ok == -1)
+        {
+            System.out.println("Can't find an account with the specific account number!");
         }
     }
 
     @Override
     public String toString() {
         StringBuffer result = new StringBuffer();
+
         result.append(firstName + ' ' + lastName + " accounts:\n");
-        for(int i=0; i<numAccounts; ++i){
+
+        for(int i = 0; i < numAccounts; ++i){
             result.append( "\t" + accounts[i] +"\n");
         }
         return result.toString();

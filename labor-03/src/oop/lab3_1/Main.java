@@ -18,27 +18,24 @@ public class Main {
         System.out.println(customer1);
 
         Customer customer2 = new Customer("Mary", "WHITE");
+
         BankAccount account2 = new BankAccount("OTP0002");
+
         customer2.setAccount(account2);
         System.out.println(customer2);
+
         customer2.getAccount().deposit(5000);
         System.out.println(customer2);
+
         customer2.getAccount().withdraw(500);
         System.out.println(customer2);
+
         customer2.closeAccount();
         System.out.println(customer2);
+
         customer2.setAccount(account1);
+
         System.out.println(customer1);
         System.out.println(customer2);
-//        BankAccount account2 = new BankAccount("OTP002");
-//        account2.deposit(2000);
-//        BankAccount account3 = account1;
-//
-//        System.out.println(account1);
-//        System.out.println(account2);
-//        System.out.println(account3);
-//
-        //customer1.setAccount(account1);
-        //System.out.println(customer1);
     }
 }
