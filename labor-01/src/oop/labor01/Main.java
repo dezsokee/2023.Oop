@@ -1,5 +1,7 @@
 package oop.labor01;
 
+import java.util.Random;
+
 public class Main {
     public static void main(String[] args) {
         System.out.println("Labor 1 - 1. feladat");
@@ -52,9 +54,24 @@ public class Main {
         System.out.println("The devitation of the array is: " + stdev(x));
         System.out.println();
 
+        Random random = new Random();
+        double y[] = new double[10];
+
+        for(int i = 0; i<10; i++)
+        {
+            y[i] = random.nextInt(1);
+        }
+
+        for (int i = 0; i < 10; i++) {
+            System.out.print(y[i] + " ");
+        }
+
+        System.out.println();
+
+
         System.out.println("Labor 1 - 10. feladat");
         System.out.println("The two largest element of the array is");
-        double[] max_element = max2(x);
+        double[] max_element = max2(y);
 
         for (int i = 0; i < max_element.length; i++) {
             System.out.print(max_element[i] + " ");
@@ -85,6 +102,7 @@ public class Main {
         return max;
     }
 
+    //bitmuvelet
     public static int countBits(int number) {
         int sum = 0;
 
