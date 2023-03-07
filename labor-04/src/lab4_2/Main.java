@@ -9,19 +9,23 @@ import java.util.TreeMap;
 public class Main {
     public static void main(String[] args) {
         ArrayList<Customer> customers = new ArrayList<>();
-        int i = 0;
+        int i = -1;
 
-        try (Scanner scanner = new Scanner(new File("lab4_2_input.txt"))) {
+        try (Scanner scanner = new Scanner(new File("lab4_2_input.csv"))) {
             while (scanner.hasNextLine()) {
                 String line = scanner.nextLine();
+                if (line.isEmpty()) {
+                    continue;
+                }
                 String[] items = line.split(",");
                 String type = items[0].trim();
                 if (type.equals("Customer")) {
-                    i++;
                     String firstName = items[1].trim();
                     String lastName = items[2].trim();
                     Customer actual_customer = new Customer(firstName, lastName);
                     customers.add(actual_customer);
+                    i++;
+
                 }
                 else {
                     String accountNumber = items[1].trim();
