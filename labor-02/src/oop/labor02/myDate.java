@@ -12,10 +12,6 @@ public class myDate {
             this.month = month;
             this.day = day;
         }
-        else
-        {
-
-        }
     }
 
     public int getDay() {
